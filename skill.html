@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Skills</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #FFFACD, #F4A460); /* Light yellow and sandal mixed background */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #8B4513;
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .skills-container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .skill {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .skill img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .skill-details {
+            flex: 1;
+            margin-left: 15px;
+        }
+        .skill-details h2 {
+            margin: 0;
+            color: #333;
+            font-size: 1.5rem;
+        }
+        .skill-details input[type="range"] {
+            width: 100%;
+            margin-top: 10px;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+        .skill-details input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: #8B4513; /* Sandal-colored thumb */
+            border-radius: 50%;
+        }
+        .skill-percentage {
+            font-size: 1.2rem;
+            color: #333;
+            margin-right: 20px;
+        }
+        .cancel-button {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #FF0000;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="cancel-button" onclick="goHome()">✖</button>
+    <h1>Skills</h1>
+    <div class="skills-container">
+        <div class="skill" id="html-skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Logo">
+            <div class="skill-details">
+                <h2>HTML</h2>
+                <input type="range" min="0" max="100" value="90" disabled>
+            </div>
+            <div class="skill-percentage">94%</div>
+        </div>
+        <div class="skill" id="css-skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS Logo">
+            <div class="skill-details">
+                <h2>CSS</h2>
+                <input type="range" min="0" max="100" value="85" disabled>
+            </div>
+            <div class="skill-percentage">90%</div>
+        </div>
+        <div class="skill" id="js-skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript Logo">
+            <div class="skill-details">
+                <h2>JavaScript</h2>
+                <input type="range" min="0" max="100" value="75" disabled>
+            </div>
+            <div class="skill-percentage">75%</div>
+        </div>
+        <div class="skill" id="java-skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java Logo">
+            <div class="skill-details">
+                <h2>Java</h2>
+                <input type="range" min="0" max="100" value="80" disabled>
+            </div>
+            <div class="skill-percentage">80%</div>
+        </div>
+        <div class="skill" id="c-skill">
+            <img src="https://cdn-icons-png.flaticon.com/512/919/919841.png" alt="C Logo">
+            <div class="skill-details">
+                <h2>C</h2>
+                <input type="range" min="0" max="100" value="70" disabled>
+            </div>
+            <div class="skill-percentage">75%</div>
+        </div>
+    </div>
+
+    <script>
+        const skills = document.querySelectorAll('.skill');
+        let currentSkill = 0;
+
+        function showSkills() {
+            if (currentSkill < skills.length) {
+                skills[currentSkill].style.animationDelay = `${currentSkill}s`;
+                skills[currentSkill].style.animationPlayState = 'running';
+                currentSkill++;
+                setTimeout(showSkills, 1000); // Delay of 1 second per skill
+            }
+        }
+
+        function goHome() {
+            window.location.href = 'index.html'; // Replace with your home page URL
+        }
+
+        // Start displaying skills
+        showSkills();
+    </script>
+</body>
+</html>
