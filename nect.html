@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Game</title>
+    <style>
+
+        body {
+            background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+    
+        .start-button {
+            position: absolute;
+            left: 70%;
+            font-size: 24px;
+            padding: 20px 40px;
+            background-color: #2eee34;
+            color: rgb(18, 12, 12);
+            border: none;
+            cursor: pointer;
+            margin-top: 15%;
+            border-radius: 20%;
+        }
+
+        .start-button:hover {
+            background-color: #d5f1d7;
+        }
+        header {
+    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+  color: #aa3636;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+main {
+  padding: 20px;
+}
+        #certifications {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.certificate {
+  display: flex;
+  background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+  border: 2px solid #302a2a;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-image {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  margin: 0;
+  border-radius: 0;
+  cursor: zoom-out;
+}
+
+.certificate-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.certificate h2 {
+  margin-top: 0;
+  color: #0073e6;
+}
+
+
+.cancel-button {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: #FF0000;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="start-btn" class="start-button">Click it</button>
+    <button class="cancel-button" onclick="goHome()">✖</button>
+    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #302a2a;">Project</h1>
+    <br>
+    <br><br>
+  <main>
+    <section id="certifications">
+      <div class="certificate">
+        <img src="Bird-2.png" alt="IoT Certification" class="certificate-image" onclick="toggleFullscreen(this)">
+        <div class="certificate-details">
+        
+            <ul> <h2>BIRD GAME</h2>
+          <p>Languages: <b>HTML,CSS,JAVASCRIPT</b></p>
+          <p>project on : January 2025</p>
+            </ul>
+        </div>
+      </div>
+
+    <script>
+        function goHome() {
+            window.location.href = 'index.html'; // Replace with your home page URL
+        }
+        function toggleFullscreen(image) {
+  if (image.classList.contains('fullscreen')) {
+    
+    image.classList.remove('fullscreen');
+    document.body.style.overflow = 'auto'; // Enable scrolling
+  } else {
+    
+    image.classList.add('fullscreen');
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+  }
+}
+        document.getElementById("start-btn").addEventListener('click', function() {
+            window.location.href = "indem.html";  // Redirect to the game page
+        });
+    </script>
+
+</body>
+</html>
