@@ -44,22 +44,8 @@
             height: 60px;
             z-index: 1;
         }
-        .percentage {
-            position: absolute;
-            top: 60%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            font-size: 1.2em;
-            color: darkskyblue;
-            display: none;
-            z-index: 2;
-        }
-        .card:hover .percentage {
-            display: block;
-        }
 
-        /* Individual card colors */
+    
         .html {
             background-color: #e34c26;
         }
@@ -77,72 +63,245 @@
             background-color: #a8b9cc;
             color: black;
         }
+        .img{
+            position: absolute;
+            top: 93%;
+            left: 5%;
+            display: flex;
+            height: 45%;
+            width: 50%;
+        }
+        .aero{
+            position: absolute;
+            top: 93%;
+            left: 33%;
+            display: flex;
+            height: 20%;
+            width: 20%;
+
+        }
+        .img2{
+            position: absolute;
+            top: 93%;
+            left: 43%;
+            display: flex;
+            height: 45%;
+            width: 25%;
+        }
+        .aero1{
+            position: absolute;
+            top: 93%;
+            left: 33%;
+            display: flex;
+            height: 20%;
+            width: 20%;
+
+        }
+        .img3{
+            position: absolute;
+            top: 2%;
+            left: 44%;
+            display: flex;
+            height: 223%;
+            width: 27%;
+        }
+        .aero2{
+            position: absolute;
+            top: 93%;
+            left: 54%;
+            display: flex;
+            height: 20%;
+            width: 21%;
+
+        }
+        .img4{
+            position: absolute;
+            top: 93%;
+            left: 83%;
+            display: flex;
+            height: 45%;
+            width: 25%;
+        }
+        .aero3{
+            position: absolute;
+            top: 93%;
+            left: 74%;
+            display: flex;
+            height: 20%;
+            width: 20%;
+
+        }
+        .font{
+    display: flex;
+    position: absolute;
+    top: 138%;
+    left: 10%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.font2{
+    display: flex;
+    position: absolute;
+    top: 138%;
+    left: 47%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.font3{
+    display: flex;
+    position: absolute;
+    top: 138%;
+    left: 67%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.font4{
+    display: flex;
+    position: absolute;
+    top: 138%;
+    left: 87%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.graph-container {
+            display: flex;
+            align-items: flex-end;
+            gap: 50px;
+            padding: 20px;
+            position: absolute;
+            top: 159%;
+        }
+
+        .box {
+            width: 200px;
+            position: relative;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .box:hover {
+            transform: scale(1.2);
+        }
+
+        .box:nth-child(1) {
+            height: 200px;
+            background-color: #ff6b6b;
+        }
+
+        .box:nth-child(2) {
+            height: 300px;
+            background-color: #ffcc00;
+        }
+
+        .box:nth-child(3) {
+            height: 200px;
+            background-color: #4caf50;
+        }
+
+        .small-box {
+            width: 213px;
+            height: 70px;
+            background-color: #000;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -73px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1 style="position: absolute;top: 1%;left: 48%;"><center><b>SKILLS</b></center></h1>
+    <h1 style="position: absolute;top: 1%;left: 45%;"><center><b>SKILLS</b></center></h1>
+    <h1 style="position: absolute;top: 10%;left: 35%;font-family: 'Times New Roman', Times, serif;"><center><b>PROGRAMMING LANGUAGES</b></center></h1>
+
     <div id="skills-container">
         <div class="card html">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo">
-            <div class="percentage" data-target="90">0%</div>
+            
             HTML
         </div>
         <div class="card css">
             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo">
-            <div class="percentage" data-target="88">0%</div>
             CSS
         </div>
         <div class="card javascript">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
-            <div class="percentage" data-target="99">0%</div>
             JavaScript
         </div>
         <div class="card java">
             <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo">
-            <div class="percentage" data-target="90">0%</div>
             Java
         </div>
         <div class="card c">
             <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg" alt="C Logo">
-            <div class="percentage" data-target="78">0%</div>
             C
         </div>
     </div>
-    <script>
-        const skills = ["HTML", "CSS", "JavaScript", "Java", "C"];
+    
+    <h1 style="position: absolute;top:80%;left: 41%;font-family: 'Times New Roman', Times, serif;"><center><b>UI and UX Design</b></center></h1>
+    <div class="img">
+    <img src="ui $ ux img.png">
+    </div>
+    <div class="aero">
+    <img src="aero mark 1.png">
+    </div>
+    <div class="img2">
+        <img src="ui $ ux 1.png">
+        </div>
+        <div class="aero2">
+            <img src="aero mark 1.png">
+        <div class="img3">
+            <img src="UN $ UX 3.png">
+            </div></div>
+            <div class="aero3">
+                <img src="aero mark 1.png"></div>
+                <div class="img4">
+                    <img src="ui $ ux 4.png.">
+                    </div>
+            </div>
+            <div class="font">
+                <p>This is my prototype model for UX and UI<br> design created in Figma.</p></div>
+                <div class="font2">    
+                <p>Login Page </p></div>
+                <div class="font3">
+                <p>Home Page</p></div>
+                <div class="font4">
+                <p>Account Page</p>
+            </div>
+            <br>
+            <h1 style="position: absolute;top:147%;left: 42%;font-family: 'Times New Roman', Times, serif;"><center><b>SKILLS SUMMARY</b></center></h1>
+            <div class="graph-container">
+                <!-- Box with Platforms -->
+                <div class="box">
+                   <br>Leader Ship <br><br> Time Management <br><br>Fluent Communication 
+                    <div class="small-box">Soft Skills</div>
+                </div>
+                <!-- Box with Soft Skills -->
+                <div class="box">
+                    <br>  MySQL <br><br>Dev c++  <br><br>Eclipse IDE <br><br> Visual Studio Code
+                    <div class="small-box">Platforms</div>
+                </div>
+                <!-- Box with Languages -->
+                <div class="box">
+                    <br>Tamil<br><br>English
+                    <div class="small-box">Languages</div>
+                </div>
+            </div>
+            <h1 style="position: absolute;top:215%;left: 43.5%;font-family: 'Times New Roman', Times, serif;font-size: small;"><center><b>&copy; 2025 Pradeep. All rights reserved.</b></center></h1>
 
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mouseover', () => {
-                const percentageElement = card.querySelector('.percentage');
-                const target = parseInt(percentageElement.getAttribute('data-target'));
-                let count = 0;
-                const interval = setInterval(() => {
-                    if (count >= target) {
-                        clearInterval(interval);
-                    } else {
-                        count++;
-                        percentageElement.textContent = `${count}%`;
-                    }
-                }, 1000 / target);
-            });
-        });
 
-        function removeSkill(skill) {
-            const index = skills.indexOf(skill);
-            if (index !== -1) {
-                skills.splice(index, 1);
-                updateUI(skill);
-            }
-        }
 
-        function updateUI(skill) {
-            const skillCard = document.querySelector(`.card:contains(${skill})`);
-            if (skillCard) {
-                skillCard.remove();
-            }
-            const percentage = Math.round((skills.length / 5) * 100);
-            document.getElementById("percentage").textContent = `Skills Known: ${percentage}%`;
-        }
-    </script>
+            
 </body>
 </html>
